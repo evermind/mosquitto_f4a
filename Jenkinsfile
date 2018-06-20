@@ -7,7 +7,7 @@ pipeline {
 	stages {
 		stage('Docker') {
 			steps {
-				dir('docker') {
+				dir('') {
 					script {
 						image = docker.build("docker.evermind.de/flex4apps/mosquitto")
 						docker.withRegistry("https://docker.evermind.de","docker.evermind.de-write")  {

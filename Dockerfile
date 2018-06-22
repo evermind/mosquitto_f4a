@@ -4,5 +4,6 @@ RUN apk add --update --no-cache python py-pip bash && \
 
 COPY /templates/ /templates/
 COPY docker-entrypoint.sh /
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD [ "mosquitto", "-c", "/mosquitto/config/mosquitto.conf"]
